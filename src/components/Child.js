@@ -1,17 +1,19 @@
-import React  , {useState} from "react";
+import React, { Component } from 'react';
 
-const Child = ({prop}) => {
-     
+class Child extends Component {
+  handleInput = (event) => {
+    const newValue = event.target.value;
+    this.props.onInputChange(newValue);
+  };
 
-    function changeValue(e){
-      prop(e.target.value) 
-    }
-
-  return(
-    <div className="child">
-        <h1>Child Component</h1>
-        <input onChange={changeValue} type="text" />
-    </div> 
-  )
+  render() {
+    return (
+      <div className="child">
+        <h2>Child Component</h2>
+        <input className='input' type="text" value={this.props.inputValue} onChange={this.handleInput}/>
+      </div>
+    );
+  }
 }
+
 export default Child;

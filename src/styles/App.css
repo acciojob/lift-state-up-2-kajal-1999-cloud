@@ -1,1 +1,25 @@
 
+
+.input{
+    padding: 8px;
+    width: 200px;
+    border-radius: 2px;
+    border: rgb(50, 230, 247);
+}
+.input:focus{
+    outline: none;
+}
+.parent{
+    padding: 30px;
+    background-color: greenyellow;
+}
+.child{
+    background-color: red;
+    padding: 30px;
+}
+.parent h1{
+    font-weight: bold;
+}
+.child h2{
+    font-weight: bold;
+}
